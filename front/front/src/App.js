@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-import { Home, Auth } from './pages';
+import { Route} from 'react-router-dom';
+import { Home, Auth } from './pages/index';
 import HeaderContainer from './components/Base/HeaderContainer'
 
 

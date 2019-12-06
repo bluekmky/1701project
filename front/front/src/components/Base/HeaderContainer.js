@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import Header from './Header/index';
+import React from 'react';
+import Header from './Header/Header';
 
-class HeaderContainer extends Component {
-    render() {
-        return (
-            <Header/>
-        );
-    }
+function HeaderContainer(){
+    return (
+        <Header/>
+    )
 }
 
 export default HeaderContainer;
