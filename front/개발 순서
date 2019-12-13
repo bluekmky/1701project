@@ -1,0 +1,46 @@
+1. 프론트 앱 만들기
+create-react-app 앱이름
+ 
+2. 필요한 라이브러리 설치
+yarn add react-router-dom react-redux redux redux-actions immutable styled-components open-color
+
+3. 디렉토리 설정 
+src 폴더 내에 
+components: 프리젠테이셔널 컴포넌트들이 위치합니다
+containers: 컨테이너 컴포넌트들이 위치합니다
+lib: 프로젝트에서 필요한 함수들을 여기에 저장합니다
+pages: 라우트 관련 컴포넌트들이 위치합니다
+redux: 리덕스 관련 코드가 위치합니다
+폴더들을 만든다.
+
+4. 라우트할 때 사용할 컴포넌트 제작
+pages 폴더안에 Auth.js Home.js 제작 
+
+5. 라우트 인덱스 만들기 
+pages/index.js
+export { default as Home } from './Home';
+export { default as Auth } from './Auth';
+
+6. 라우트 설정
+
+import { Route } from 'react-router-dom';
+import { Home, Auth } from 'pages';
+
+<Route exact path="/" component={Home}/>
+<Route path="/auth" component={Auth}/>
+
+6-2. BrowserRouter 통해 라우터 구성
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import App from './App';
+
+const Root = ({store}) => {
+    return (
+        <BrowserRouter>
+            <Route path="/" component={App}/>
+        </BrowserRouter>
+    );
+};
+export default Root;
+
+7. 헤더부분 제작
