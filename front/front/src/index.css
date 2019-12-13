@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Alatsi&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Alatsi&display=swap");
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  background: #f1f1f5;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: #f1f1f5;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }

@@ -1,13 +1,12 @@
-import React from 'react';
-import Body from '../components/Base/Body/Body'
+import React from "react";
+import Body from "../components/Base/Body/Body";
 
-
-function Home(){
+function Home() {
     return (
         <div>
-            <Body/>
+            <Body />
         </div>
-    )
+    );
 }
 
 export default Home;
