@@ -1,7 +1,7 @@
 import React from "react";
+import SimpleDialog from "./Dialog";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
-import { Button } from "@material-ui/core";
 
 function makeRow([sun, mon, tue, wed, thu, fri, sat]) {
     return { sun, mon, tue, wed, thu, fri, sat };
@@ -52,29 +52,28 @@ function Body(value) {
         }
         rows.push(makeRow(row));
     }
-
     return rows.map(row => (
         <TableRow>
             <TableCell align="center">
-                <Button style={{ color: "#FF0000" }}>{row.sun}</Button>
+                <SimpleDialog color="#FF0000" month={today} value={row.sun} />
             </TableCell>
             <TableCell align="center">
-                <Button>{row.mon}</Button>
+                <SimpleDialog color="#000000" month={today} value={row.mon} />
             </TableCell>
             <TableCell align="center">
-                <Button>{row.tue}</Button>
+                <SimpleDialog color="#000000" month={today} value={row.tue} />
             </TableCell>
             <TableCell align="center">
-                <Button>{row.wed}</Button>
+                <SimpleDialog color="#000000" month={today} value={row.wed} />
             </TableCell>
             <TableCell align="center">
-                <Button>{row.thu}</Button>
+                <SimpleDialog color="#000000" month={today} value={row.thu} />
             </TableCell>
             <TableCell align="center">
-                <Button>{row.fri}</Button>
+                <SimpleDialog color="#000000" month={today} value={row.fri} />
             </TableCell>
             <TableCell align="center">
-                <Button style={{ color: "#0015FF" }}>{row.sat}</Button>
+                <SimpleDialog color="#0015FF" month={today} value={row.sat} />
             </TableCell>
         </TableRow>
     ));
